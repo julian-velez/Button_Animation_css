@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 250px;
+}
+
+
+
+.hover-effect {
+    position: relative;
+    display: inline-block;
+    font-size: 50px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+  }
+  
+  .hover-effect::before,
+  .hover-effect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hover-effect::before {
+    left: 0;
+    /* background-color: #f00; */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(104,7,111,1) 35%, rgba(44,136,187,1) 83%, rgba(23,182,214,1) 100%);
+  }
+  
+  .hover-effect::after {
+    right: 0;
+    /* background-color: #0f0; */
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(16,163,124,1) 22%, rgba(93,191,155,1) 27%, rgba(137,190,125,1) 47%, rgba(176,189,98,1) 65%, rgba(253,187,45,1) 100%);
+  }
+  
+  .hover-effect:hover::before {
+    width: 50%;
+  }
+  
+  .hover-effect:hover::after {
+    width: 50%;
+  }
+  
